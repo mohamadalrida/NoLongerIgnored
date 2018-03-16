@@ -6,28 +6,33 @@ public class move1 : MonoBehaviour {
 
 	public Transform[] positions;
 
-	public enum PositionsAt { one, two, three} ;
-	PositionsAt positionsAt;
+	//public enum PositionsAt { one, two, three} ;
+	//PositionsAt positionsAt;
 
-	bool calledMove;//, 
+	//bool calledMove;
+
+    public float degreesPerSecond = 1.5f;
 
 
-	// Use this for initialization
-	void Start () {
-		//iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(5, 0, 0), "islocal", true, "time", 1.0f, "easetype", "linear"));
 
-		iTween.MoveTo (gameObject, new Vector3 (-5, 0, 0), 2.0f);
+    // Use this for initialization
+    void Start () {
+        
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		switch (positionsAt) {
+        iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(-500, 500, 400), "islocal", true, "time", 180.0f, "easetype", "easeInOutSine"));
+        transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+
+        /*switch (positionsAt) {
 
 		case PositionsAt.one:
 
 			if (calledMove == false) {
-				iTween.MoveTo (gameObject, positions [0].position, 2.0f);
+				iTween.MoveTo (gameObject, positions [0].position, 60.0f);
 				calledMove = true;
 			}
 
@@ -41,7 +46,7 @@ public class move1 : MonoBehaviour {
 
 		case PositionsAt.two:
 			if (calledMove == false) {
-				iTween.MoveTo (gameObject, positions [1].position, 2.0f);
+				iTween.MoveTo (gameObject, positions [1].position, 20.0f);
 				calledMove = true;
 			}
 
@@ -58,7 +63,7 @@ public class move1 : MonoBehaviour {
 
 
 			if (calledMove == false) {
-				iTween.MoveTo (gameObject, positions [2].position, 2.0f);
+				iTween.MoveTo (gameObject, positions [2].position, 20.0f);
 				calledMove = true;
 			}
 
@@ -71,6 +76,6 @@ public class move1 : MonoBehaviour {
 
 
 		}
-
-	}
+        */
+    }
 }
