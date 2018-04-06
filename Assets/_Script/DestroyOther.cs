@@ -7,6 +7,7 @@ public class DestroyOther : MonoBehaviour {
 
     public float MyTime = 0f;
     public Transform MeterProgress;
+    public GameObject lantern;
 
 
 
@@ -14,7 +15,7 @@ public class DestroyOther : MonoBehaviour {
 	void Start () {
 
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
-
+        
 	}
 	
 	// Update is called once per frame
@@ -26,9 +27,8 @@ public class DestroyOther : MonoBehaviour {
 
         if (MyTime >= 2f)
         {
-
+            lantern.GetComponent<move1>().enabled = true;
         }
-
 	}
 
     public void ResetTime()
