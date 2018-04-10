@@ -11,6 +11,8 @@ public class DestroyOther : MonoBehaviour {
     public GameObject lantern;
     public GameObject raycast;
     public GameObject reticle;
+    public GameObject lantern1;
+    public GameObject lantern2;
     private bool raycaster;
 
 
@@ -36,6 +38,8 @@ public class DestroyOther : MonoBehaviour {
             ResetTime();
 
             Destroy(reticle);
+            Destroy(lantern1);
+            Destroy(lantern2);
             Destroy(gameObject);
         }
 	}

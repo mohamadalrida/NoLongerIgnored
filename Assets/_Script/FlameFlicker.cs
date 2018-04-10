@@ -44,7 +44,7 @@ public class FlameFlicker : MonoBehaviour {
     private float CalculateChange()
     {
         //creates fluctuation between frequency, pulse and intensity
-        changeValue = -Mathf.Sin(timePassed * 2 * Mathf.PI) * 0.002f + 0.40f;
+        changeValue = -Mathf.Sin(timePassed * 2 * Mathf.PI) * 0.003f + 0.40f;
         return changeValue;
     }
 }
