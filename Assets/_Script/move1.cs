@@ -11,7 +11,7 @@ public class move1 : MonoBehaviour {
 
 	//bool calledMove;
 
-    public float degreesPerSecond = 1.5f;
+    public float degreesPerSecond = 3.0f;
 
 
 
@@ -24,7 +24,7 @@ public class move1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(-200, 500, 200), "islocal", true, "time", 260.0f, "easetype", "easeInOutSine"));
+        iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(-600, 1000, 200), "islocal", true, "time", 260.0f, "easetype", "easeInOutSine"));
         transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
 
         /*switch (positionsAt) {
