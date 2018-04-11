@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class move1 : MonoBehaviour {
 
 	public Transform[] positions;
+    public Canvas ChooserText;
 
 	//public enum PositionsAt { one, two, three} ;
 	//PositionsAt positionsAt;
@@ -17,6 +19,8 @@ public class move1 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        Destroy(ChooserText);
         
 		
 	}
@@ -24,7 +28,7 @@ public class move1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(-600, 1000, 2000), "islocal", true, "time", 450.0f, "easetype", "easeInOutSine"));
+        iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(-600, 1500, 2000), "islocal", true, "time", 450.0f, "easetype", "easeInOutSine"));
         // transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
         transform.Rotate(Vector3.up * Time.deltaTime *1.5f); 
         /*switch (positionsAt) {
