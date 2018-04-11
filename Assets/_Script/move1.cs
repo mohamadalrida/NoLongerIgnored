@@ -30,7 +30,7 @@ public class move1 : MonoBehaviour {
 
         iTween.MoveTo(gameObject, iTween.Hash("position", new Vector3(-600, 1500, 2000), "islocal", true, "time", 450.0f, "easetype", "easeInOutSine"));
         // transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
-        transform.Rotate(Vector3.up * Time.deltaTime *1.5f); 
+        transform.Rotate(Vector3.up * Time.deltaTime *2.5f); 
         /*switch (positionsAt) {
 
 		case PositionsAt.one:
