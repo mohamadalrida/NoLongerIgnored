@@ -13,6 +13,8 @@ public class DestroyOther : MonoBehaviour {
     public GameObject reticle;
     public GameObject lantern1;
     public GameObject lantern2;
+    public GameObject lamplight;
+    public GameObject canvas;
     private bool raycaster;
 
 
@@ -39,7 +41,10 @@ public class DestroyOther : MonoBehaviour {
 
             lantern.GetComponent<move1>().enabled = true;
             raycast.GetComponent<VREyeRaycaster>().enabled = false;
+            canvas.GetComponent<UIFader>().enabled = true;
             ResetTime();
+            SetLight();
+            
 
             Destroy(reticle);
             Destroy(lantern1);
@@ -50,9 +55,14 @@ public class DestroyOther : MonoBehaviour {
 
     public void ResetTime()
     {
-
         MyTime = 0f;
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
         reticle.SetActive(false);
+    }
+
+    public void SetLight()
+    {
+
+        //lamplight.GetComponent<Light>().enabled = true;
     }
 }
