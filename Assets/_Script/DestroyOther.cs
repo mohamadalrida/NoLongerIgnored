@@ -14,6 +14,7 @@ public class DestroyOther : MonoBehaviour {
     public GameObject lantern1;
     public GameObject lantern2;
     public GameObject lamplight;
+    public GameObject subtlelight;
     public GameObject canvas;
     private bool raycaster;
 
@@ -35,6 +36,8 @@ public class DestroyOther : MonoBehaviour {
         MeterProgress.GetComponent<Image>().fillAmount = MyTime/3;
 
         reticle.SetActive(true);
+
+        subtlelight.GetComponent<Light>().enabled = true;
 
         if (MyTime >= 3f)
         {
@@ -62,7 +65,7 @@ public class DestroyOther : MonoBehaviour {
 
     public void SetLight()
     {
-
-        //lamplight.GetComponent<Light>().enabled = true;
+        subtlelight.GetComponent<Light>().enabled = false;
+        lamplight.GetComponent<Light>().enabled = true;
     }
 }
