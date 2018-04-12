@@ -21,6 +21,7 @@ public class DestroyOther : MonoBehaviour {
 	void Start () {
 
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
+        reticle.SetActive(false);
         
 	}
 	
@@ -29,10 +30,13 @@ public class DestroyOther : MonoBehaviour {
     {
         MyTime += Time.deltaTime;
 
-        MeterProgress.GetComponent<Image>().fillAmount = MyTime/2;
+        MeterProgress.GetComponent<Image>().fillAmount = MyTime/3;
 
-        if (MyTime >= 2f)
+        reticle.SetActive(true);
+
+        if (MyTime >= 3f)
         {
+
             lantern.GetComponent<move1>().enabled = true;
             raycast.GetComponent<VREyeRaycaster>().enabled = false;
             ResetTime();
@@ -49,5 +53,6 @@ public class DestroyOther : MonoBehaviour {
 
         MyTime = 0f;
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
+        reticle.SetActive(false);
     }
 }
