@@ -16,6 +16,13 @@ public class DestroyOther : MonoBehaviour {
     public GameObject lamplight;
     public GameObject subtlelight;
     public GameObject canvas;
+    public GameObject release;
+    public CanvasGroup main;
+    public CanvasGroup second;
+    public float mainalpha;
+    public float secondalpha;
+
+
     private bool raycaster;
 
 
@@ -25,6 +32,9 @@ public class DestroyOther : MonoBehaviour {
 
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
         reticle.SetActive(false);
+        canvas.GetComponent<CanvasGroup>().alpha = mainalpha;
+        release.GetComponent<CanvasGroup>().alpha = secondalpha;
+        
         
 	}
 	
@@ -37,16 +47,19 @@ public class DestroyOther : MonoBehaviour {
 
         reticle.SetActive(true);
 
-        subtlelight.GetComponent<Light>().enabled = true;
+        lamplight.GetComponent<Light>().enabled = true;
+        
 
         if (MyTime >= 3f)
         {
 
             lantern.GetComponent<move1>().enabled = true;
             raycast.GetComponent<VREyeRaycaster>().enabled = false;
-            canvas.GetComponent<UIFader>().enabled = true;
+            
+
             ResetTime();
             SetLight();
+            CanvasSet();
             
 
             Destroy(reticle);
@@ -61,11 +74,35 @@ public class DestroyOther : MonoBehaviour {
         MyTime = 0f;
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
         reticle.SetActive(false);
+        lamplight.GetComponent<Light>().enabled = false;
+        lamplight.GetComponent<LightIncrease>().enabled = false;
     }
 
     public void SetLight()
     {
-        subtlelight.GetComponent<Light>().enabled = false;
         lamplight.GetComponent<Light>().enabled = true;
     }
+
+    public void CanvasSet()
+    {
+
+        canvas.GetComponent<UIFader>().enabled = true;
+
+        //if (mainalpha == 0f)
+        //{
+        //    release.SetActive(true);
+        //    StartCoroutine(Releaser());
+
+        //}
+
+
+    }
+
+    //IEnumerator Releaser()
+    //{
+    //    yield return new WaitForSeconds(2);
+    //    Debug.Log("hello");
+    //    //release.GetComponent<UIFader>().enabled = true;
+    //    Destroy(release, 3);
+    //}
 }
