@@ -32,8 +32,8 @@ public class DestroyOther : MonoBehaviour {
 
         MeterProgress.GetComponent<Image>().fillAmount = MyTime;
         reticle.SetActive(false);
-        canvas.GetComponent<CanvasGroup>().alpha = mainalpha;
-        release.GetComponent<CanvasGroup>().alpha = secondalpha;
+        mainalpha =  canvas.GetComponent<CanvasGroup>().alpha;
+        secondalpha = release.GetComponent<CanvasGroup>().alpha;
         
         
 	}
@@ -48,7 +48,6 @@ public class DestroyOther : MonoBehaviour {
         reticle.SetActive(true);
 
         lamplight.GetComponent<Light>().enabled = true;
-        
 
         if (MyTime >= 3f)
         {
@@ -65,7 +64,7 @@ public class DestroyOther : MonoBehaviour {
             Destroy(reticle);
             Destroy(lantern1);
             Destroy(lantern2);
-            Destroy(gameObject);
+            Destroy(gameObject.GetComponent<DestroyOther>());
         }
 	}
 
@@ -85,24 +84,7 @@ public class DestroyOther : MonoBehaviour {
 
     public void CanvasSet()
     {
-
         canvas.GetComponent<UIFader>().enabled = true;
-
-        //if (mainalpha == 0f)
-        //{
-        //    release.SetActive(true);
-        //    StartCoroutine(Releaser());
-
-        //}
-
-
+        gameObject.GetComponent<Releaser>().enabled = true;
     }
-
-    //IEnumerator Releaser()
-    //{
-    //    yield return new WaitForSeconds(2);
-    //    Debug.Log("hello");
-    //    //release.GetComponent<UIFader>().enabled = true;
-    //    Destroy(release, 3);
-    //}
 }
