@@ -21,8 +21,11 @@ public class CanvasStuff : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
         canvasEGO.GetComponent<BoxCollider>().enabled = false;
         canvas.GetComponent<UIFaderIn>().enabled = true;
+        listener.GetComponent<AudioSource>().enabled = true;
         listener.PlayOneShot(music);
     }
 }
