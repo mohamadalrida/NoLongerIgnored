@@ -56,5 +56,8 @@ public class Releaser : MonoBehaviour {
         musicTime -= Time.deltaTime / 4;
         fader.SetActive(true);
         music.volume = musicTime;
+        yield return new WaitForSecondsRealtime(7);
+        Application.Quit();
+        
     }
 }
