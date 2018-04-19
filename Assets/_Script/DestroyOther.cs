@@ -19,8 +19,8 @@ public class DestroyOther : MonoBehaviour {
     public GameObject release;
     public CanvasGroup main;
     public CanvasGroup second;
-    public float mainalpha;
-    public float secondalpha;
+    private float mainalpha;
+    private float secondalpha;
 
 
     private bool raycaster;
@@ -87,4 +87,6 @@ public class DestroyOther : MonoBehaviour {
         canvas.GetComponent<UIFader>().enabled = true;
         gameObject.GetComponent<Releaser>().enabled = true;
     }
+
+    
 }
