@@ -1,37 +1,27 @@
 fileFormatVersion: 2
-guid: a6b899c179714d041a4047643a0efea6
-timeCreated: 1524788201
+guid: 0f8c6cd6f20467b4caabe4659a437592
+timeCreated: 1525334565
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: Left_Post
-    100004: Right_Post
-    100006: Top_Beam
-    100008: Top_Beam1
-    100010: Top_Beam2
+    100004: Top_Beam
+    100006: Top_Beam1
     400000: //RootNode
     400002: Left_Post
-    400004: Right_Post
-    400006: Top_Beam
-    400008: Top_Beam1
-    400010: Top_Beam2
+    400004: Top_Beam
+    400006: Top_Beam1
     2300000: Left_Post
-    2300002: Right_Post
-    2300004: Top_Beam
-    2300006: Top_Beam1
-    2300008: Top_Beam2
+    2300002: Top_Beam
+    2300004: Top_Beam1
     3300000: Left_Post
-    3300002: Right_Post
-    3300004: Top_Beam
-    3300006: Top_Beam1
-    3300008: Top_Beam2
+    3300002: Top_Beam
+    3300004: Top_Beam1
     4300000: Left_Post
     4300002: Top_Beam1
-    4300004: Top_Beam2
-    4300006: Right_Post
-    4300008: Top_Beam
+    4300004: Top_Beam
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -67,7 +57,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.7
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
