@@ -53,11 +53,10 @@ public class Releaser : MonoBehaviour {
         Debug.Log("before time");
         yield return new WaitForSecondsRealtime(80);
         Debug.Log("after time");
-        musicTime -= Time.deltaTime / 4;
+        musicTime -= Time.deltaTime / 8;
         fader.SetActive(true);
         music.volume = musicTime;
-        yield return new WaitForSecondsRealtime(7);
+        yield return new WaitForSecondsRealtime(15);
         Application.Quit();
-        
     }
 }
