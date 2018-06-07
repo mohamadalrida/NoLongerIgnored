@@ -40,7 +40,7 @@ public class Releaser : MonoBehaviour {
 
         d += Time.deltaTime;
 
-        if (d >= 9)
+        if (d >= 90)
         {
             musicTime -= Time.deltaTime / 8;
             fader.SetActive(true);
