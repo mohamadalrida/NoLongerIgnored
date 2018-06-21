@@ -61,6 +61,7 @@ public class Releaser : MonoBehaviour {
 
     private void ReleasePls()
     {
+<<<<<<< HEAD
         f += Time.deltaTime;
         
         if (f >= 8)
@@ -68,6 +69,14 @@ public class Releaser : MonoBehaviour {
             release.GetComponent<UIFader>().enabled = true;
         }   
             
+=======
+        Debug.Log("before time");
+        yield return new WaitForSecondsRealtime(80);
+        Debug.Log("after time");
+        musicTime -= Time.deltaTime / 4;
+        fader.SetActive(true);
+        music.volume = musicTime;
+>>>>>>> parent of cee03a3... Actual Open Night build
     }
 
     //IEnumerator Releasing()
