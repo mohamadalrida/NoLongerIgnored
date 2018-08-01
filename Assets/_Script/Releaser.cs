@@ -31,28 +31,28 @@ public class Releaser : MonoBehaviour {
 
         release.SetActive(true);
         
+        if (release.GetComponent<UIFader>().enabled == true)
+        {
             
+        }
+        else if (secondalpha == 1f)
+        {
+            StartCoroutine(Releasing());
+            StartCoroutine(Fader());
+        }
 
-            if (secondalpha == 1f)
-            {
-                StartCoroutine(Releasing());
-                StartCoroutine(Fader());
-            }
-        //}
 	}
 
     IEnumerator Releasing()
     {
-       
         yield return new WaitForSecondsRealtime(8);
         release.GetComponent<UIFader>().enabled = true;
+        StopCoroutine(Releasing());
     }
 
     IEnumerator Fader()
     {
-        Debug.Log("before time");
         yield return new WaitForSecondsRealtime(80);
-        Debug.Log("after time");
         musicTime -= Time.deltaTime / 4;
         fader.SetActive(true);
         music.volume = musicTime;
