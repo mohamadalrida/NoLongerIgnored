@@ -30,24 +30,22 @@ public class Releaser : MonoBehaviour {
         secondalpha = release.GetComponent<CanvasGroup>().alpha;
 
         release.SetActive(true);
-        
         if (release.GetComponent<UIFader>().enabled == true)
         {
-            
+
         }
         else if (secondalpha == 1f)
         {
             StartCoroutine(Releasing());
             StartCoroutine(Fader());
         }
-
+       
 	}
 
     IEnumerator Releasing()
     {
         yield return new WaitForSecondsRealtime(8);
         release.GetComponent<UIFader>().enabled = true;
-        StopCoroutine(Releasing());
     }
 
     IEnumerator Fader()
