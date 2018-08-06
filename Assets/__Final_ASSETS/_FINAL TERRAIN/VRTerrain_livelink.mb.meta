@@ -6,13 +6,75 @@ ModelImporter:
     100000: pPlane1
     100002: textureDeformerHandle1
     100004: //RootNode
+    100006: T_Mesh_1
+    100008: T_Mesh_10
+    100010: T_Mesh_11
+    100012: T_Mesh_12
+    100014: T_Mesh_2
+    100016: T_Mesh_3
+    100018: T_Mesh_4
+    100020: T_Mesh_5
+    100022: T_Mesh_6
+    100024: T_Mesh_7
+    100026: T_Mesh_8
+    100028: T_Mesh_9
+    100030: Terrain_GRP
     400000: pPlane1
     400002: textureDeformerHandle1
     400004: //RootNode
+    400006: T_Mesh_1
+    400008: T_Mesh_10
+    400010: T_Mesh_11
+    400012: T_Mesh_12
+    400014: T_Mesh_2
+    400016: T_Mesh_3
+    400018: T_Mesh_4
+    400020: T_Mesh_5
+    400022: T_Mesh_6
+    400024: T_Mesh_7
+    400026: T_Mesh_8
+    400028: T_Mesh_9
+    400030: Terrain_GRP
     2100000: lambert1
     2300000: pPlane1
+    2300002: T_Mesh_1
+    2300004: T_Mesh_10
+    2300006: T_Mesh_11
+    2300008: T_Mesh_12
+    2300010: T_Mesh_2
+    2300012: T_Mesh_3
+    2300014: T_Mesh_4
+    2300016: T_Mesh_5
+    2300018: T_Mesh_6
+    2300020: T_Mesh_7
+    2300022: T_Mesh_8
+    2300024: T_Mesh_9
     3300000: pPlane1
+    3300002: T_Mesh_1
+    3300004: T_Mesh_10
+    3300006: T_Mesh_11
+    3300008: T_Mesh_12
+    3300010: T_Mesh_2
+    3300012: T_Mesh_3
+    3300014: T_Mesh_4
+    3300016: T_Mesh_5
+    3300018: T_Mesh_6
+    3300020: T_Mesh_7
+    3300022: T_Mesh_8
+    3300024: T_Mesh_9
     4300000: pPlane1
+    4300002: T_Mesh_1
+    4300004: T_Mesh_2
+    4300006: T_Mesh_3
+    4300008: T_Mesh_4
+    4300010: T_Mesh_5
+    4300012: T_Mesh_6
+    4300014: T_Mesh_7
+    4300016: T_Mesh_8
+    4300018: T_Mesh_9
+    4300020: T_Mesh_10
+    4300022: T_Mesh_11
+    4300024: T_Mesh_12
     9500000: //RootNode
   externalObjects: {}
   materials:
